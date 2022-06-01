@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#section1 h2 {
+    margin: 20px auto;
+}
+#section1 #name {
+    margin: 10px auto;
+}
+#section1 #picset {
+    width: 820px;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+#section1 #picset img{
+    width: 820px;
+    height: 500px;
+    position: absolute;
+    transition: all 1s;
+}
+#section1 #picset dl {
+    background-color: rgba(0, 0, 0, 0.233);
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    opacity: 0;
+    z-index: 1;
+}
+#section1 #picset dl.fadeIn {
+    animation: fadeIn forwards 1s;
+}
+#section1 #picset dl.fadeOut {
+    animation: fadeOut forwards 1s;
+}
+@keyframes fadeIn {
+    from {bottom: -100px; opacity: 0;}
+    to {bottom: 0; opacity: 1;}
+}
+@keyframes fadeOut {
+    from {bottom: 0; opacity: 1;}
+    to {bottom: 20px; opacity: 0;}
+}
+#section1 #picset dt{
+    margin: 10px auto;
+}
+
+#section1 #dotList {
+    margin-top: 20px;
+}
+#section1 #dotList li {
+    display: inline-block;
+    background-color: lightgray;
+    color: white;
+    margin: 10px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+#section1 #dotList li.active {
+    background-color: coral;
+}
+
+#section1 #slide {
+    position: relative;
+    width: 820px;
+    height: 500px;
+    margin: auto;
+}
+#section1 button {
+    background-color: lightgray;
+    border: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    cursor: pointer;
+}
+#section1 button:hover {
+    background-color: coral;
+}
+#section1 #prev_btn {
+    left: -150px;
+}
+#section1 #next_btn {
+    right: -150px;
+}
